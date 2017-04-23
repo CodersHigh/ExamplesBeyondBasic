@@ -20,44 +20,54 @@ class APODData {
     let apodBaseURL = "https://api.nasa.gov/planetary/apod?api_key=MTg0aQMxj8DgcGsoEplsm2wW9SmmKpegOWNUrob4&date="
     
     var apodDictionary:[String:APOD] = [:]
+    let jsonQueue = OperationQueue()
     
-    func fetchToday(_ completion:UpdateFunction){
-        let apod = apodOfDay(dateString(Date()))
-        completion()
-    }
-    
-    func fetch(_ days:Int, _ completion:UpdateFunction){
+    func fetch(_ days:Int, _ completion:@escaping UpdateFunction){
         let dateArray:[Int] = Array(0 ... (days-1))
-        let apods = dateArray.map{dateBehind($0)}.map{dateString($0)}.map{
-            apodOfDay($0)
-            completion()
+        dateArray.map{dateBehind($0)}.map{dateString($0)}.map{date in
+            jsonQueue.addOperation {
+                self.apodOfDay(date, completion)
+            }
         }
     }
     
     
-    func apodOfDay(_ dateString:String) -> APOD? {
+    func apodOfDay(_ dateString:String, _ completion:@escaping UpdateFunction) -> APOD? {
         if let existAPOD = apodDictionary[dateString] {
             return existAPOD
         }
         
-        let dateURL = URL(string: (apodBaseURL + dateString))
-        do {
-            let apodData = try Data(contentsOf:dateURL!)
-            let apodJSON = try JSONSerialization.jsonObject(with: apodData, options: []) as! [String:AnyObject]
-            
-            let imagePath:String = apodJSON["url"] as! String
-            let imageData = try Data(contentsOf:URL(string:imagePath)!)
-            let image = UIImage(data: imageData)
-            
-            let apodTitle = apodJSON["title"] as! String
-            let apodDate = apodJSON["date"] as! String
-            let apodExplanation = apodJSON["explanation"] as! String
-            
-            let apod = APOD(title:apodTitle, date:apodDate, explanation:apodExplanation, image:image!)
-            
-            apodDictionary[dateString] = apod
-            return apod
-        } catch { return nil }
+        var newAPOD:APOD?
+        
+        guard let dateURL = URL(string: (apodBaseURL + dateString)) else { return nil }
+        let urlRequest = URLRequest(url:dateURL)
+        
+        let jsonSession = URLSession.shared
+        let jsonTask = jsonSession.dataTask(with: urlRequest, completionHandler: {(data, response, error) -> Void in
+            do {
+                let apodJSON = try JSONSerialization.jsonObject(with: data!, options: []) as! [String:AnyObject]
+                
+                let imagePath:String = apodJSON["url"] as! String
+                let imageData = try Data(contentsOf:URL(string:imagePath)!)
+                let image = UIImage(data: imageData)
+                
+                let apodTitle = apodJSON["title"] as! String
+                let apodDate = apodJSON["date"] as! String
+                let apodExplanation = apodJSON["explanation"] as! String
+                
+                newAPOD = APOD(title:apodTitle, date:apodDate, explanation:apodExplanation, image:image!)
+                
+                self.apodDictionary[dateString] = newAPOD
+                
+                OperationQueue.main.addOperation {
+                    completion()
+                }
+                
+            } catch { print("JSON Parsing Error") }
+        })
+        jsonTask.resume()
+        
+        return newAPOD
     }
     
     
