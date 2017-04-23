@@ -10,6 +10,7 @@ import UIKit
 
 class APODListController: UITableViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +19,10 @@ class APODListController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        apodData.fetch(3){
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,13 +39,13 @@ class APODListController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return apodData.apodList.count
+        return apodData.apodDictionary.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "APODCell", for: indexPath)
-        let apodForCell:APOD = apodData.apodList[indexPath.row]
+        let apodForCell:APOD = apodData.apodAt(indexPath.row)
         cell.textLabel?.text = apodForCell.title
         cell.imageView?.image = apodForCell.image
 
