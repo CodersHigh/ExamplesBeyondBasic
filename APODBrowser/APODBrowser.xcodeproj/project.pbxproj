@@ -12,6 +12,8 @@
 		2C0707BA1EA3340B00602EDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0707B81EA3340B00602EDF /* Main.storyboard */; };
 		2C0707BC1EA3340B00602EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0707BB1EA3340B00602EDF /* Assets.xcassets */; };
 		2C0707BF1EA3340B00602EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0707BD1EA3340B00602EDF /* LaunchScreen.storyboard */; };
+		2C0707C71EA336FE00602EDF /* APODDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0707C61EA336FE00602EDF /* APODDataCenter.swift */; };
+		2C0707C91EA34CB600602EDF /* APODListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0707C81EA34CB600602EDF /* APODListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2C0707BB1EA3340B00602EDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C0707BE1EA3340B00602EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C0707C01EA3340B00602EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C0707C61EA336FE00602EDF /* APODDataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODDataCenter.swift; sourceTree = "<group>"; };
+		2C0707C81EA34CB600602EDF /* APODListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				2C0707B41EA3340B00602EDF /* AppDelegate.swift */,
+				2C0707C61EA336FE00602EDF /* APODDataCenter.swift */,
+				2C0707C81EA34CB600602EDF /* APODListController.swift */,
 				2C0707B61EA3340B00602EDF /* ViewController.swift */,
 				2C0707B81EA3340B00602EDF /* Main.storyboard */,
 				2C0707BB1EA3340B00602EDF /* Assets.xcassets */,
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0707C71EA336FE00602EDF /* APODDataCenter.swift in Sources */,
 				2C0707B71EA3340B00602EDF /* ViewController.swift in Sources */,
 				2C0707B51EA3340B00602EDF /* AppDelegate.swift in Sources */,
+				2C0707C91EA34CB600602EDF /* APODListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +310,7 @@
 				2C0707C51EA3340B00602EDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -27,16 +27,16 @@
             </objects>
             <point key="canvasLocation" x="2046" y="190"/>
         </scene>
-        <!--Table View Controller-->
+        <!--APOD from NASA-->
         <scene sceneID="6x9-SV-nlz">
             <objects>
-                <tableViewController id="bGn-zk-aVT" sceneMemberID="viewController">
+                <tableViewController id="bGn-zk-aVT" customClass="APODListController" customModule="APODBrowser" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5PP-H9-uzF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TKi-vA-MLn">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="APODCell" id="TKi-vA-MLn">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TKi-vA-MLn" id="Ldg-xI-hPZ">
@@ -53,7 +53,9 @@
                             <outlet property="delegate" destination="bGn-zk-aVT" id="4Ur-fQ-gDB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="U0I-er-6jP"/>
+                    <navigationItem key="navigationItem" title="APOD from NASA" id="U0I-er-6jP">
+                        <barButtonItem key="backBarButtonItem" title="APOD" id="YsC-u1-892"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LmU-28-lOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
