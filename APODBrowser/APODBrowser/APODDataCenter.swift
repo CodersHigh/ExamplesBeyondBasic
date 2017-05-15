@@ -11,7 +11,7 @@ import UIKit
 
 let apodData = APODData()
 
-typealias APOD = (title:String, date:String, explanation:String, image:UIImage)
+typealias APOD = (title:String, date:String, explanation:String, image:UIImage?)
 typealias UpdateFunction = () -> Void
 
 
@@ -55,7 +55,7 @@ class APODData {
                 let apodDate = apodJSON["date"] as! String
                 let apodExplanation = apodJSON["explanation"] as! String
                 
-                newAPOD = APOD(title:apodTitle, date:apodDate, explanation:apodExplanation, image:image!)
+                newAPOD = APOD(title:apodTitle, date:apodDate, explanation:apodExplanation, image:image)
                 
                 self.apodDictionary[dateString] = newAPOD
                 
@@ -84,6 +84,8 @@ class APODData {
     
     func dateString(_ date:Date) -> String {
         let formatter = DateFormatter()
+        
+        formatter.timeZone = TimeZone.init(identifier: "America/Los_Angeles")
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter.string(from: date)
     }
