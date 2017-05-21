@@ -11,6 +11,7 @@ import UIKit
 class MainTableViewController : UITableViewController {
     let queueSub = OperationQueue()
     var modelCinema = CinemaModel()
+    var modelPoster = PosterModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,17 +41,26 @@ class MainTableViewController : UITableViewController {
         
         cell.imageView?.image = UIImage(named: "loading.png")
         
-        let stringURL = "http://z.ebadaq.com:45070/CinemaKid/movie/stillcut/\(dicInfo["posterCode"]!)"
-        let url = URL(string: stringURL)!
-        self.queueSub.addOperation({ Void -> Void in
-            do {
-            let data = try Data(contentsOf: url)
-            
-                OperationQueue.main.addOperation({ 
-                    cell.imageView?.image = UIImage.init(data: data)
-                })
-            } catch {}
+        if let posterCode = dicInfo["posterCode"] {
+            self.modelPoster.requestPoster(posterCode, afterUpdate: { (dataImage:Data?) in
+                if let data = dataImage {
+                    cell.imageView?.image = UIImage(data: data)
+                }
             })
+        }
+        
+        
+//        let stringURL = "http://z.ebadaq.com:45070/CinemaKid/movie/stillcut/\(dicInfo["posterCode"]!)"
+//        let url = URL(string: stringURL)!
+//        self.queueSub.addOperation({ Void -> Void in
+//            do {
+//            let data = try Data(contentsOf: url)
+//            
+//                OperationQueue.main.addOperation({ 
+//                    cell.imageView?.image = UIImage.init(data: data)
+//                })
+//            } catch {}
+//            })
         
         
         return cell
