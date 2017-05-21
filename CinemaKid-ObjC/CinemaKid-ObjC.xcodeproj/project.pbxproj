@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1218344C1ED0BF4F00CD78AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1218344B1ED0BF4F00CD78AE /* main.m */; };
+		1218344F1ED0BF4F00CD78AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1218344E1ED0BF4F00CD78AE /* AppDelegate.m */; };
+		121834551ED0BF4F00CD78AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121834531ED0BF4F00CD78AE /* Main.storyboard */; };
+		121834571ED0BF4F00CD78AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 121834561ED0BF4F00CD78AE /* Assets.xcassets */; };
+		1218345A1ED0BF4F00CD78AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121834581ED0BF4F00CD78AE /* LaunchScreen.storyboard */; };
+		121834631ED0C0DA00CD78AE /* MainCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121834621ED0C0DA00CD78AE /* MainCollectionViewController.m */; };
+		1218346B1ED0C32E00CD78AE /* CinemaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1218346A1ED0C32E00CD78AE /* CinemaModel.swift */; };
+		1218346F1ED11EB600CD78AE /* PosterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1218346E1ED11EB600CD78AE /* PosterModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		121834471ED0BF4F00CD78AE /* CinemaKid-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CinemaKid-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1218344B1ED0BF4F00CD78AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1218344D1ED0BF4F00CD78AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1218344E1ED0BF4F00CD78AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		121834541ED0BF4F00CD78AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		121834561ED0BF4F00CD78AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		121834591ED0BF4F00CD78AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1218345B1ED0BF4F00CD78AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		121834611ED0C0DA00CD78AE /* MainCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewController.h; sourceTree = "<group>"; };
+		121834621ED0C0DA00CD78AE /* MainCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewController.m; sourceTree = "<group>"; };
+		1218346A1ED0C32E00CD78AE /* CinemaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CinemaModel.swift; sourceTree = "<group>"; };
+		1218346C1ED0C36200CD78AE /* CinemaKid-ObjC-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CinemaKid-ObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		1218346D1ED11EB600CD78AE /* PosterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PosterModel.h; sourceTree = "<group>"; };
+		1218346E1ED11EB600CD78AE /* PosterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PosterModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		121834441ED0BF4F00CD78AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1218343E1ED0BF4F00CD78AE = {
+			isa = PBXGroup;
+			children = (
+				121834491ED0BF4F00CD78AE /* CinemaKid-ObjC */,
+				121834481ED0BF4F00CD78AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		121834481ED0BF4F00CD78AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				121834471ED0BF4F00CD78AE /* CinemaKid-ObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		121834491ED0BF4F00CD78AE /* CinemaKid-ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				1218346D1ED11EB600CD78AE /* PosterModel.h */,
+				1218346E1ED11EB600CD78AE /* PosterModel.m */,
+				1218346C1ED0C36200CD78AE /* CinemaKid-ObjC-Bridging-Header.h */,
+				1218346A1ED0C32E00CD78AE /* CinemaModel.swift */,
+				121834611ED0C0DA00CD78AE /* MainCollectionViewController.h */,
+				121834621ED0C0DA00CD78AE /* MainCollectionViewController.m */,
+				1218344D1ED0BF4F00CD78AE /* AppDelegate.h */,
+				1218344E1ED0BF4F00CD78AE /* AppDelegate.m */,
+				121834531ED0BF4F00CD78AE /* Main.storyboard */,
+				121834561ED0BF4F00CD78AE /* Assets.xcassets */,
+				121834581ED0BF4F00CD78AE /* LaunchScreen.storyboard */,
+				1218345B1ED0BF4F00CD78AE /* Info.plist */,
+				1218344A1ED0BF4F00CD78AE /* Supporting Files */,
+			);
+			path = "CinemaKid-ObjC";
+			sourceTree = "<group>";
+		};
+		1218344A1ED0BF4F00CD78AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1218344B1ED0BF4F00CD78AE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		121834461ED0BF4F00CD78AE /* CinemaKid-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1218345E1ED0BF4F00CD78AE /* Build configuration list for PBXNativeTarget "CinemaKid-ObjC" */;
+			buildPhases = (
+				121834431ED0BF4F00CD78AE /* Sources */,
+				121834441ED0BF4F00CD78AE /* Frameworks */,
+				121834451ED0BF4F00CD78AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CinemaKid-ObjC";
+			productName = "CinemaKid-ObjC";
+			productReference = 121834471ED0BF4F00CD78AE /* CinemaKid-ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1218343F1ED0BF4F00CD78AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = ebadaq.com;
+				TargetAttributes = {
+					121834461ED0BF4F00CD78AE = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 9DNUYNCU88;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 121834421ED0BF4F00CD78AE /* Build configuration list for PBXProject "CinemaKid-ObjC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1218343E1ED0BF4F00CD78AE;
+			productRefGroup = 121834481ED0BF4F00CD78AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				121834461ED0BF4F00CD78AE /* CinemaKid-ObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		121834451ED0BF4F00CD78AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1218345A1ED0BF4F00CD78AE /* LaunchScreen.storyboard in Resources */,
+				121834571ED0BF4F00CD78AE /* Assets.xcassets in Resources */,
+				121834551ED0BF4F00CD78AE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		121834431ED0BF4F00CD78AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1218344F1ED0BF4F00CD78AE /* AppDelegate.m in Sources */,
+				1218344C1ED0BF4F00CD78AE /* main.m in Sources */,
+				1218346F1ED11EB600CD78AE /* PosterModel.m in Sources */,
+				1218346B1ED0C32E00CD78AE /* CinemaModel.swift in Sources */,
+				121834631ED0C0DA00CD78AE /* MainCollectionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		121834531ED0BF4F00CD78AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				121834541ED0BF4F00CD78AE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		121834581ED0BF4F00CD78AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				121834591ED0BF4F00CD78AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1218345C1ED0BF4F00CD78AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1218345D1ED0BF4F00CD78AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1218345F1ED0BF4F00CD78AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 9DNUYNCU88;
+				INFOPLIST_FILE = "CinemaKid-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ebadaq.CinemaKid-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CinemaKid-ObjC/CinemaKid-ObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		121834601ED0BF4F00CD78AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 9DNUYNCU88;
+				INFOPLIST_FILE = "CinemaKid-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ebadaq.CinemaKid-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CinemaKid-ObjC/CinemaKid-ObjC-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		121834421ED0BF4F00CD78AE /* Build configuration list for PBXProject "CinemaKid-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1218345C1ED0BF4F00CD78AE /* Debug */,
+				1218345D1ED0BF4F00CD78AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1218345E1ED0BF4F00CD78AE /* Build configuration list for PBXNativeTarget "CinemaKid-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1218345F1ED0BF4F00CD78AE /* Debug */,
+				121834601ED0BF4F00CD78AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1218343F1ED0BF4F00CD78AE /* Project object */;
+}
